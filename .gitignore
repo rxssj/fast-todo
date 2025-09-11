@@ -1,5 +1,7 @@
 backend/.venv/
 
+/tmp
+
 __pycache__/
 *.pyc
 
