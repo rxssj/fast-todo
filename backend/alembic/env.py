@@ -7,6 +7,7 @@ from alembic import context
 
 import os
 from db.db import Base
+from db.models import User, Todo
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -66,7 +67,7 @@ def run_migrations_online() -> None:
     config.set_main_option("sqlalchemy.url", url)
 
     connectable = engine_from_config(
-        config.set_main_option("sqlalchemy.url", {}),
+        config.get_section(config.config_ini_section),
         prefix="sqlalchemy.",
         poolclass=pool.NullPool,
     )
