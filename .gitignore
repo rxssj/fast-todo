@@ -1,12 +1,12 @@
 backend/.venv/
-
 /tmp
+.env
 
 __pycache__/
 *.pyc
 
-.env
-
 .vscode/
 
 /todo.md
+
+.DS_Store
